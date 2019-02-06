@@ -60,7 +60,9 @@ public class ProductController {
 
         return produit;
     }
-
+    // Partie 1 calculerMargeProduit
+    @GetMapping(value = "AdminProduits")
+    public List<Product> marcgeProduit(){ return productDao.calculerMargeProduit(); }
 
 
 
@@ -86,7 +88,7 @@ public class ProductController {
     @DeleteMapping (value = "/Produits/{id}")
     public void supprimerProduit(@PathVariable int id) {
 
-        productDao.delete(id);
+       // productDao.delete(id);
     }
 
     @PutMapping (value = "/Produits")

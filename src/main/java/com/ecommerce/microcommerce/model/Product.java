@@ -24,7 +24,7 @@ public class Product {
     private int prix;
 
     //information que nous ne souhaitons pas exposer
-    @JsonIgnore
+    //@JsonIgnore
     private int prixAchat;
 
     //constructeur par défaut

@@ -64,6 +64,12 @@ public class ProductController {
     @GetMapping(value = "AdminProduits")
     public List<Product> marcgeProduit(){ return productDao.calculerMargeProduit(); }
 
+    // Partie 2 Affichage par ordre alphabétique NB : produits en MINUSCULE
+    @GetMapping(value = "produits")
+    public List<Product> trierProduitsParOrdreAlphabetique(){
+        return productDao.findAllByFirstnameOrderByFirstnameAsc();
+    }
+
 
 
     //ajouter un produit

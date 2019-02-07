@@ -18,9 +18,6 @@ public interface ProductDao extends JpaRepository<Product, Integer> {
     List<Product> calculerMargeProduit();
 
     // Partie 2 tri par ordre alphabétique
-/*    @Query("SELECT id, nom, prix, prixDachat FROM Product ORDER BY nom ASC")
-    List<Product> findAll();*/
-
     @Query("SELECT id, nom, prix FROM Product ORDER BY nom ASC")
     List<Product> findAllByFirstnameOrderByFirstnameAsc();
 
